@@ -1,14 +1,14 @@
 {
   "translateAPI": {
     "baseUrl": "https://api.cognitive.microsofttranslator.com",
-    "key": "083f98b1ea1e49bcbadc13de4616d9a8",
+    "key": "put you'r key here",
     "routs": {
       "translate": "translate"
     }
   },
   "postsAPI": {
     "baseURL": "https://my.api.mockaroo.com",
-    "key": "ad43d380",
+    "key": "put you'r key here",
     "routs": {
       "posts": "posts"
     }

@@ -1,0 +1,22 @@
+{
+  "translateAPI": {
+    "baseUrl": "https://api.cognitive.microsofttranslator.com",
+    "key": "083f98b1ea1e49bcbadc13de4616d9a8",
+    "routs": {
+      "translate": "translate"
+    }
+  },
+  "postsAPI": {
+    "baseURL": "https://my.api.mockaroo.com",
+    "key": "ad43d380",
+    "routs": {
+      "posts": "posts"
+    }
+  },
+  "sportedLanguages": [
+    { "label": "עברית", "value": "HE" },
+    { "label": "English", "value": "EN" },
+    { "label": "Croatian", "value": "HR" },
+    { "label": "Fiji", "value": "FJ" }
+  ]
+}

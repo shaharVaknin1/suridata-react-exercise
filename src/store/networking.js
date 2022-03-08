@@ -1,20 +1,21 @@
 import axios from "axios";
+import * as config from "../config.json";
 
-//TODO - create config file
+const { translateAPI, postsAPI } = config;
 
 export const fetchAllPosts = axios.create({
-  baseURL: "https://my.api.mockaroo.com/posts",
-  headers: { "X-API-Key": "ad43d380" },
+  baseURL: `${postsAPI.baseURL}/${postsAPI.routs.posts}`,
+  headers: { "X-API-Key": postsAPI.key },
 });
 
-export const translateText = (fromLanguage, toLanguage) =>
+export const translateText = (fromLanguage, toLanguage, body) =>
   axios.post(
-    `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from=${fromLanguage}&to=${toLanguage}`,
-    {},
+    `${translateAPI.baseUrl}/${translateAPI.routs.translate}?api-version=3.0&from=${fromLanguage}&to=${toLanguage}`,
+    body,
     {
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
-        "Ocp-Apim-Subscription-Key": "083f98b1ea1e49bcbadc13de4616d9a8",
+        "Ocp-Apim-Subscription-Key": translateAPI.key,
         "Ocp-Apim-Subscription-Region": "centralus",
       },
     }
